@@ -1,0 +1,19 @@
+{
+    "Tel Aviv": {
+      "latitude": 32.08088,
+      "longitude": 34.78057
+    },
+    "Eilat": {
+      "latitude": 29.55805,
+      "longitude": 34.94821
+    },
+    "Haifa": {
+      "latitude": 32.81841,
+      "longitude": 34.9885
+    },
+    "Beer Sheva": {
+      "latitude": 31.25181,
+      "longitude": 34.7913
+    }
+
+}

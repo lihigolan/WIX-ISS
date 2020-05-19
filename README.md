@@ -9,7 +9,7 @@ output file: union_data.csv
 
 The code generates the 2 stored procedure:
 
- * calc_stat_and_update - calc daily ststistics and updates city_stats_lihi
+ * calc_stat_and_update - calc daily avg statistics per city and updates city_stats_lihi
  * calc_union_table - calc union of all statics and creates new union table, which is deleted later.
 
 The output generated file is attached, you can delete, it will be created/updated every run, as well as the tables and the procedures.

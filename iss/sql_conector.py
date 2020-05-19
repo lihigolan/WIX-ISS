@@ -103,13 +103,22 @@ def call_proc(name):
         print(exc)
         return False
 
-def get_data_from_table(name):
+def get_data_from_table(table_name):
     try:
-        mycursor.execute("select * from " + name + ";")
+        mycursor.execute("select * from " + table_name + ";")
         return mycursor.fetchall()
     except Exception as exc:
         print(exc)
         return None
+
+def get_col_names(table_name):
+    try:
+        mycursor.execute("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'"+table_name+"';")
+        return mycursor.fetchall()
+    except Exception as exc:
+        print(exc)
+        return None
+
     
 def delete_table(name):
     try:

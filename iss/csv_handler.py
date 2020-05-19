@@ -1,18 +1,15 @@
 import csv
-import constants
-from sql_conector import get_data_from_table
+from sql_conector import get_data_from_table, get_col_names
 
-fields = [constants.CITY, constants.POPULATION, constants.MAX_TEMP, constants.MIN_TEMP, constants.UPDATE_DATE,
-          constants.AVG_APPEARANCE]
-
-filename = constants.CSV_FILE_NAME + ".csv"
-
-def write_union_data_to_csv():
+def write_table_to_csv(table_name, filename):
     try:
-        with open(filename, 'w') as csvfile:
+        with open(filename + ".csv", 'w') as csvfile:
             csvwriter = csv.writer(csvfile)
-            data = get_data_from_table(constants.TABLE_UNION)
-            if (data):
+            fields = get_col_names(table_name)
+            data = get_data_from_table(table_name)
+
+            if (data and fields):
+                fields = arrange(fields)
                 csvwriter.writerow(fields)
                 csvwriter.writerows(data)
                 print("output file name is: " + filename)
@@ -20,3 +17,9 @@ def write_union_data_to_csv():
                 print("Oops, Error - data from sql is null")
     except Exception as exc:
         print(exc)
+
+def arrange(fields):
+    arrangedfields = []
+    for field in fields:
+        arrangedfields.append(field[0])
+    return arrangedfields

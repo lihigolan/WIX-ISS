@@ -17,7 +17,6 @@ def start_task():
     if not create_orbital_table():
         print("TABLE orbital ERROR, BYE")
         return
-
     initial_orbital(cities_data)
     initial_stats(cities_data)
     calc_stats()
@@ -39,7 +38,7 @@ def make_union():
     print("ERROR, Something went wrong with the procedure: "+constants.PROCEDURE_UNION_NAME+", BYE BYE!")
 
 def create_csv():
-    csv_handler.write_union_data_to_csv();
+    csv_handler.write_table_to_csv(constants.TABLE_UNION, constants.CSV_FILE_NAME);
     delete_table(constants.TABLE_UNION)
     print("DONE!!!! BYE ..... ")
 
@@ -62,7 +61,6 @@ def initial_stats(cities_data):
         data.append(row)
 
     reset_stats_table(data)
-
 
 
 start_task()

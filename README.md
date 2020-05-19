@@ -9,18 +9,19 @@ output file: union_data.csv
 
 The code generates the 2 stored procedure:
 
-calc_stat_and_update - calc daily ststistics and updates city_stats_lihi
-calc_union_table - calc union of all statics and creates new union table, which is deleted later.
+ * calc_stat_and_update - calc daily ststistics and updates city_stats_lihi
+ * calc_union_table - calc union of all statics and creates new union table, which is deleted later.
 The output generated file is attached, you can delete, it will be created/updated every run, as well as the tables and the procedures.
 
 ## Dependencies:
 packages I used (need to be (pip/pip3) install for run the program):
 
-datetime
-requests - pip3
-json
-csv
-mysql.connector
+ * datetime
+ * requests - pip3
+ * json
+ * csv
+ * mysql.connector
+
 The db credentials are hard coded (as your example)
 
 ## NOTE:

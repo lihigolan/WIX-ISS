@@ -46,7 +46,7 @@ def reset_stats_table(data):
         insert_to_stats(data)
 
     except Exception as exc:
-        if not "already exists" in exc.msg:
+        if not constants.ALR_EXIST in exc.msg:
             print(exc)
             return False
     return True

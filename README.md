@@ -14,6 +14,8 @@ The code generates the 2 stored procedure:
 
 The output generated file is attached, you can delete, it will be created/updated every run, as well as the tables and the procedures.
 
+In the output file - appearance col is my addition (the daily avg per city)
+
 ## Dependencies:
 packages I used (need to be (pip/pip3) install for run the program):
 

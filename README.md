@@ -1,4 +1,4 @@
-WIX-ISS
+#WIX-ISS
 Wix interview assignment
 
 SRC DIR: iss

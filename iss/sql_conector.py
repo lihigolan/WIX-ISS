@@ -8,11 +8,11 @@ def connect_db():
     try:
         global mydb
         mydb = mysql.connector.connect(
-        host="",
-        port="",
-        database="",
-        user="",
-        passwd=""
+        host="35.195.247.8",
+        port="3306",
+        database="interview",
+        user="interview_user",
+        passwd="mysql202098114345!#"
         )
 
         global mycursor
